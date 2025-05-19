@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lungs Detail</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      Lungs Segmentation
+      <button class="menu-button" onclick="toggleMenu()">⋮</button>
+      <div class="dropdown" id="menuDropdown">
+        <a onclick="openModal()" id="signInOption">Sign In</a>
+        <a onclick="signOut()" id="signOutOption" style="display: none"
+          >Sign Out</a
+        >
+      </div>
+    </header>
+
+    <div class="chat-container" id="chat">
+      <div class="message bot">Hello! How can I help you today?</div>
+    </div>
+
+    <div class="input-container">
+      <label for="imageUpload" class="file-label">📎</label>
+      <input type="file" id="imageUpload" accept="image/*" />
+      <input type="text" id="userInput" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <!-- Sign In Modal -->
+    <div class="modal" id="loginModal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">✖</button>
+        <h3>Sign In</h3>
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button onclick="submitLogin()">Login</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
